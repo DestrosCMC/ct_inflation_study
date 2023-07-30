@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js"></script>
+
+    <title>Data Visualization</title>
+</head>
+
+<body onload="loadScene2()">
+    <h2>2022 CT Employee Wage Growth vs Inflation
+    </h2>
+
+    <div>
+        <p> This second slide displays the 2022 wages vs the inflation rate. The inflation rate used to calculate 
+            these salaries (2021) is less than the 2022 rate (4.7% vs 8%). <br>
+            However, this is still a large margin above the 2% that the Federal Reserve aims to keep.
+            
+    </div>
+
+    <div class="container">
+        <p>Select between Real 2022 Wage and Projected 2022 Wage from 2021 Inflation and 2021 Wage
+        </p>
+        <form>
+            <label class="radio-inline">
+                <input onclick="update2022('real')" type="radio" name="optradio" checked>Real
+            </label>
+            <label class="radio-inline">
+                <input onclick="update2022('proj')" type="radio" name="optradio">Projected
+            </label>
+        </form>
+        <div class="svg-container">
+
+            <div id="my_dataviz"></div>
+        </div>
+    </div>
+    <p>
+        However, as you explore the scene, you may see that wages are close to the inflation tracking values. This finding
+        is interesting and supports the hypothesis that anticipatory wage increases can drive inflation even higher.
+    </p>
+    </p>
+    <p>The data for this study comes from CT Data and the State Employee Payroll Data <a
+        href="https://data.ct.gov/Government/State-Employee-Payroll-Data-Calendar-Year-2015-thr/virr-yb6n">CT Data</a> 
+        <br>
+        The inflation data comes from the Federal Reserve of St. Louis <a href="https://fred.stlouisfed.org/series/USACPIALLMINMEI#0">FRED</a>
+    </p>
+    <p>
+        Slide 2/3.
+    </p>
+    <a href="scene3.html"> Click Here for Slide 3</a>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js"></script>
+    <title>Data Visualization</title>
+</head>
+
+<body onload="loadScene1()">
+    <h2>Connecticut State Employee Wages vs Inflation
+    </h2>
+
+    <div>
+        <p> This interactive slideshow will investigate wage growth of Connecticut state employees alongside inflation. <br>
+            Inflation has become a hot topic with its recent rise in the years after the Covid-19 lockdowns. <br>
+            This first scene will investigate the wages paid in 2023 versus the wages that would have been paid if wages 
+            grew inline with inflation. <br> 
+            The four selected state agencies chosen are some of the largest in the state and hovering over them will display 
+            the average annual salary. 
+            </p>
+    </div>
+
+    <div class="container">
+        <p>Select between Real 2023 Wage and Projected 2023 Wage from 2022 Inflation and 2022 Wage
+        </p>
+        <form>
+            <label class="radio-inline">
+                <input onclick="update2023('real')" type="radio" name="optradio" checked>Real
+            </label>
+            <label class="radio-inline">
+                <input onclick="update2023('proj')" type="radio" name="optradio">Projected
+            </label>
+        </form>
+
+
+        <div class="svg-container">
+            <div id="my_dataviz"></div>
+        </div>
+    </div>
+    <p>The data for this study comes from CT Data and the State Employee Payroll Data <a
+            href="https://data.ct.gov/Government/State-Employee-Payroll-Data-Calendar-Year-2015-thr/virr-yb6n">CT Data</a> 
+            <br>
+            The inflation data comes from the Federal Reserve of St. Louis <a href="https://fred.stlouisfed.org/series/USACPIALLMINMEI#0">FRED</a>
+        </p>
+    <p>
+        Slide 1/3
+    </p>
+    <a href="scene2.html"> Click Here for Slide 2 </a>
+</body>
+
+</html>

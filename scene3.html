@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Data Visualization</title>
+</head>
+
+<body onload="loadScene3()">
+    <h2>Predicting 2024 Average Yearly Wage for Connecticut Agencies </h2>
+
+    <div>
+        <p>For this third scene, you will predict the inflation adjusted wages for 2024 CT State Employees by agency.
+        </p>
+    </div>
+
+    <div class="container">
+        <p>Enter the predicted inflation rate as an integer. <br>
+            For example: Entering 2 is the same as predicting the inflation rate to be 2%. 
+            
+        </p>
+        <form name="mile-form" onkeydown="return event.key != 'Enter';">
+            <label for="quantity">Annnual Mileage:</label>
+            <input type="number" id="quantity" name="quantity" min="0" max="200" value="2"
+                onkeyup="formValidation(document.getElementById('quantity').value)">
+            <input id="button" type="button" value="Submit"
+                onclick="updateInf(document.getElementById('quantity').value)">
+        </form>
+        <div class="svg-container">
+
+            <div id="my_dataviz"></div>
+        </div>
+    </div>
+    <p>The data for this study comes from CT Data and the State Employee Payroll Data <a
+        href="https://data.ct.gov/Government/State-Employee-Payroll-Data-Calendar-Year-2015-thr/virr-yb6n">CT Data</a> 
+        <br>
+        The inflation data comes from the Federal Reserve of St. Louis <a href="https://fred.stlouisfed.org/series/USACPIALLMINMEI#0">FRED</a></p>
+    <p>
+        Currently on slide 3 of 3.
+    </p>
+    <a href="index.html"> Click Here To Return Slide 1</a>
+</body>
+
+</html>
